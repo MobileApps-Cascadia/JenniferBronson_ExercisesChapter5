@@ -112,14 +112,35 @@
                 <requestFocus/>
             </EditText>
             
-            <TextView android:id="@+id/textBFF" 
-                android:layout_width="wrap_content" 
-                android:layout_height="wrap_content" 
-                android:layout_alignLeft="@+id/editBFF" 
-                android:layout_below="@+id/editName" 
-                android:layout_marginTop="16dp" 
-                android:text="BFF" 
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+            
+            
+            <TextView
+                android:id="@+id/textBFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BFF"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/editName"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+               
+                />
+            
+            <EditText
+                android:id="@+id/editBFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textBFF"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toLeftOf="@+id/textCell"
+                android:ems="10"
+                android:inputType="number" >
+                
+             </EditText>
             
             <TextView
                 android:id="@+id/textAddress"
@@ -286,14 +307,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_alignBaseline="@+id/textBirthday" />
 
-            <EditText
-                android:id="@+id/editBFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textAddress"
-                android:layout_below="@+id/textBFF"
-                android:ems="10"
-                android:inputType="number" />
+            
 
         </RelativeLayout>
     </ScrollView>

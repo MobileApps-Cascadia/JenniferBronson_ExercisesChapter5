@@ -112,21 +112,12 @@
                 <requestFocus/>
             </EditText>
             
-            <TextView android:id="@+id/textBFF" 
-                android:layout_width="wrap_content" 
-                android:layout_height="wrap_content" 
-                android:layout_alignLeft="@+id/editBFF" 
-                android:layout_below="@+id/editName" 
-                android:layout_marginTop="16dp" 
-                android:text="BFF" 
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-            
             <TextView
                 android:id="@+id/textAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/editBFF"
+                android:layout_below="@+id/editName"
         		android:layout_marginLeft="10dp"
         		android:layout_marginTop="15dp"
         		android:text="Address:"
@@ -286,14 +277,29 @@
                 android:layout_marginRight="10dp"
                 android:layout_alignBaseline="@+id/textBirthday" />
 
+            <TextView
+                android:id="@+id/textBFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BFF"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/btnBirthday"
+                android:paddingBottom="25dp"
+                />
+            
             <EditText
                 android:id="@+id/editBFF"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textAddress"
-                android:layout_below="@+id/textBFF"
                 android:ems="10"
-                android:inputType="number" />
+                android:inputType="number" 
+                 android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/textBFF"
+                android:paddingBottom="25dp"/>
 
         </RelativeLayout>
     </ScrollView>

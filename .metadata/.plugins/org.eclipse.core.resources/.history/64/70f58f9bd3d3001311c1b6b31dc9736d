@@ -21,7 +21,7 @@ public class ContactDataSource {
 		dbHelper.close();
 	}
 	
-		
+	
 	public boolean insertContact (Contact c) {
 		boolean didSucceed = false;
 		try{
@@ -65,27 +65,7 @@ public class ContactDataSource {
 			}
 		
 		catch (Exception e) {
-			//do nothing - will return false if there is an exception
-		}
-		return didSucceed;
-		}
-	
-	public boolean updateAddress (ContactAddress c) {
-		boolean didSucceed = false;
-		try {
-			Long rowId= Long.valueOf(c.getContactID());
-			ContentValues updateValues = new ContentValues();
-			
-			updateValues.put("streetaddress", c.getStreetAddress());
-			updateValues.put("city", c.getCity());
-			updateValues.put("state", c.getState());
-			updateValues.put("zipcode", c.getZipCode());
-						
-			didSucceed= database.update("contact", updateValues, "_id=" + rowId, null) > 0;
-			}
-		
-		catch (Exception e) {
-			//do nothing - will return false if there is an exception
+			//do nothing - will return false if there is an excepton
 		}
 		return didSucceed;
 		}
